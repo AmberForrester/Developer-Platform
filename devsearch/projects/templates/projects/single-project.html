@@ -1,11 +1,12 @@
 {% extends 'main.html' %}
-
-
-
 {% block content %}
 
-    <h1>Single Project Template</h1>
-    <p> {% lorem 3 b random %}</p>
+
+
+    <h1>{{project.title}}</h1>
+    <br>
+    <p>{{project.description}}</p>
+    
     
 
 {% endblock content %}
