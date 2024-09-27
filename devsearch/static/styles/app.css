@@ -442,6 +442,7 @@ img {
   display: inline-block;
   font-size: 1.6rem;
   margin-right: 1rem;
+  color: inherit;
 }
 
 .singleProject__preview {
