@@ -6,7 +6,8 @@
 
 <img src='' alt=''>
 
-<p align='center'>Online platform where Developers from around the world can create a profile, and share their work with others. Built as a full stack Django application with email functionality, messaging, commenting, API development and more!
+<p align='center'>Online platform where Developers from around the world can create a profile, and share their work with others.<br>
+Built as a full stack Django application with email functionality, messaging, commenting, API development and more!
 <br />
 <br />
 
