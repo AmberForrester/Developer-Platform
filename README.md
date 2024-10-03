@@ -16,3 +16,9 @@ Built as a full stack Django application with email functionality, messaging, co
 <br />
 
 </div>
+
+
+
+
+Github Repo for the entire Django Framework 
+https://github.com/django/django/blob/main/django/contrib/auth/views.py
