@@ -25,3 +25,9 @@ https://github.com/django/django/blob/main/django/contrib/auth/views.py
 
 Postman
 https://www.postman.com/downloads/
+
+JSON Web Tokens
+https://jwt.io/
+
+Simple JWT
+https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
