@@ -1,4 +1,5 @@
 {% extends 'main.html' %}
+{% load static %}
 {% block content %}
 
 <style>
@@ -26,9 +27,12 @@ input[type='password']:active {
 </style>
 
 
-<main class="formPage my-xl">
-    <div class="content-box">
-        <div class="formWrapper">
+<div class="auth">
+    <div class="card">
+        <div class="auth__header text-center">
+            <a href="{% url 'login' %}">
+                <img src="{% static 'images/icon.svg' %}" alt="icon" />
+              </a>
             
             <h3> Enter New Password </h3>
 
@@ -40,9 +44,13 @@ input[type='password']:active {
 
                 {% csrf_token %}
 
-                {{form.as_p}}
+                <div class="form__field" 
+                style="text-align: left">
 
-                <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+                    {{form.as_p}}
+
+                    <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+                </div>
 
             </form>
         </div>
