@@ -31,3 +31,6 @@ https://jwt.io/
 
 Simple JWT
 https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
+
+HTML Character Codes
+https://www.toptal.com/designers/htmlarrows/
