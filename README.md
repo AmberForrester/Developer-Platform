@@ -37,3 +37,6 @@ Built as a full stack Django application with email functionality, messaging, co
 * [HTML Character Codes](https://www.toptal.com/designers/htmlarrows/)
 * [PostgreSQL](https://www.postgresql.org/) - Database download
 * [pgAdmin](https://www.pgadmin.org/) - PostgreSQL GUI
+* [PostgreSQL database adapter - psycopg2](https://pypi.org/project/psycopg2/)
+* [AWS Free Tier](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all)
+* [Using Amazon RDS with Django](https://santoshgawande.com/using-amazon-rds-with-django-a-guide-to-postgresql-integration-74f6c24f4966)
