@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 import uuid
 
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
 
 
 class Profile(models.Model):
@@ -26,6 +28,17 @@ class Profile(models.Model):
     
     def __str__(self):
         return str(self.username)
+    
+    class Meta:
+        ordering = ['created']
+    
+    @property
+    def imageURL(self):
+        try:
+            url = self.profile_image.url
+        except:
+            url = 'http://127.0.0.1:8000/images/profiles/user-default.png'
+        return url
     
 class Skill(models.Model):
     owner = models.ForeignKey(Profile, on_delete=models.CASCADE,
@@ -57,4 +70,3 @@ class Message(models.Model):
     
     class Meta:
         ordering = ['is_read', '-created']
-    
