@@ -20,17 +20,20 @@ Built as a full stack Django application with email functionality, messaging, co
 
 
 
-Github Repo for the entire Django Framework 
-https://github.com/django/django/blob/main/django/contrib/auth/views.py
 
-Postman
-https://www.postman.com/downloads/
 
-JSON Web Tokens
-https://jwt.io/
 
-Simple JWT
-https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
 
-HTML Character Codes
-https://www.toptal.com/designers/htmlarrows/
+
+
+
+
+
+
+* [GitHub Repo for Django Framework](https://github.com/django/django/blob/main/django/contrib/auth/views.py)
+* [Postman](https://www.postman.com/downloads/)
+* [JSON Web Tokens](https://jwt.io/)
+* [Simple JWT](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
+* [HTML Character Codes](https://www.toptal.com/designers/htmlarrows/)
+* [PostgreSQL](https://www.postgresql.org/) - Database download
+* [pgAdmin](https://www.pgadmin.org/) - PostgreSQL GUI
