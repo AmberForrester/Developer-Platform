@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'corsheaders',
-    'storages',
+    # 'storages',
 ]
 
 REST_FRAMEWORK = {
@@ -157,7 +157,7 @@ WSGI_APPLICATION = 'devsearch.wsgi.application'
 #     }
 # }
 
-# Cloud Server Set-Up
+# Local Server Set-Up
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -232,16 +232,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # AWS S3 Settings
-AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
-
-AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
-
-AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
-
-AWS_S3_REGION_NAME = "ca-central-1"  # Set your region
-AWS_QUERYSTRING_AUTH = False
-AWS_S3_FILE_OVERWRITE = False
-
+# AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+# AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+# AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
+# AWS_S3_REGION_NAME = "ca-central-1"  # Set your region
+# AWS_QUERYSTRING_AUTH = False
+# AWS_S3_FILE_OVERWRITE = False
 # Use the correct S3Boto3 Storage Class
-DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+# DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+# STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"

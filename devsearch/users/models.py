@@ -12,11 +12,11 @@ class Profile(models.Model):
     name = models.CharField(max_length=200, null=True, blank=True)
     email = models.EmailField(max_length=500, null=True, blank=True)
     username = models.CharField(max_length=200, null=True, blank=True)
-    location = models.CharField(max_length=200, null=True, blank=True)
-    short_intro = models.CharField(max_length=200, null=True, blank=True)
+    location = models.CharField(max_length=200, null=True, blank=True, default="Earth")
+    short_intro = models.CharField(max_length=200, null=True, blank=True, default="This is a default bio. User has not added a bio yet.")
     bio = models.TextField(null=True, blank=True)
-    profile_image = models.ImageField(null=True, blank=True, upload_to='profiles/', 
-        default="profiles/user-default.png")
+    profile_image = models.ImageField(
+        null=True, blank=True, upload_to='profiles/', default="profiles/user-default.png")
     social_github = models.CharField(max_length=200, null=True, blank=True)
     social_twitter = models.CharField(max_length=200, null=True, blank=True)
     social_linkedin = models.CharField(max_length=200, null=True, blank=True)
@@ -37,12 +37,12 @@ class Profile(models.Model):
         try:
             url = self.profile_image.url
         except:
-            url = 'http://127.0.0.1:8000/images/profiles/user-default.png'
+            url = ''
         return url
     
 class Skill(models.Model):
-    owner = models.ForeignKey(Profile, on_delete=models.CASCADE,
-                            null=True, blank=True)
+    owner = models.ForeignKey(
+        Profile, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=200, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
@@ -54,8 +54,10 @@ class Skill(models.Model):
     
     
 class Message(models.Model):
-    sender = models.ForeignKey(Profile, on_delete=models.SET_NULL, null=True, blank=True)
-    recipient = models.ForeignKey(Profile, on_delete=models.SET_NULL, null=True, blank=True, related_name="messages")
+    sender = models.ForeignKey(
+        Profile, on_delete=models.SET_NULL, null=True, blank=True)
+    recipient = models.ForeignKey(
+        Profile, on_delete=models.SET_NULL, null=True, blank=True, related_name="messages")
     name = models.CharField(max_length=200, null=True, blank=True)
     email = models.EmailField(max_length=500, null=True, blank=True)
     subject = models.CharField(max_length=200, null=True, blank=True)

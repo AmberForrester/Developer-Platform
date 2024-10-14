@@ -4,22 +4,18 @@ let logoutBtn = document.getElementById('logout-btn')
 let token = localStorage.getItem('token')
 
 if (token) {
-
     loginBtn.remove()
 }
 
 else {
-
     logoutBtn.remove()
 }
 
 logoutBtn.addEventListener('click', (e) => {
-
     e.preventDefault()
     localStorage.removeItem('token')
     window.location = 'file:///C:/code/Developer-Platform/frontend/login.html'
 })
-
 
 
 
@@ -30,7 +26,6 @@ let getProjects = () => {   // Make a request
     fetch(projectsUrl)
         .then(response => response.json())   // Convert the request into JSON data.
         .then(data => {
-
             console.log(data)
             buildProjects(data)   // Trigger this function
         })
@@ -46,7 +41,6 @@ let buildProjects = (projects) => {
     projectsWrapper.innerHTML = ''
 
     for (let i =0; projects.length > i; i++){
-
         let project = projects[i]
         //console.log(project)
 
@@ -63,16 +57,13 @@ let buildProjects = (projects) => {
 
                         <i>${project.vote_ratio}% Positive Feedback </i>
                         <p>${project.description.substring(0,150)}</p>
-
                     </div>
-
                 </div>    
         `
         projectsWrapper.innerHTML += projectCard
     }
 
     addVoteEvents()   // Trigger the function to add the event listeners
-
 }
 
 
@@ -83,7 +74,6 @@ let addVoteEvents = () => {
     //console.log('VOTE BUTTONS:', voteBtns)
 
     for (let i=0; voteBtns.length > i; i++){
-
         voteBtns[i].addEventListener('click', (e) => {
             let token = localStorage.getItem('token')
             //console.log('Vote was clicked:', i)
@@ -96,23 +86,18 @@ let addVoteEvents = () => {
 
                 method: 'POST', 
                 headers: {
-
                     'Content-Type': 'application/json',
                     Authorization: `Bearer ${token}`
                 },
-
                 body: JSON.stringify({'value': vote})
             })
-
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data)
-                getProjects()   // Trigger the function to retrieve the data.
-            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data)
+                    getProjects()   // Trigger the function to retrieve the data.
+                })
         })
     }
 }
-
-
 
 getProjects()   // Trigger the function to retrieve the data.

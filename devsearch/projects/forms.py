@@ -3,6 +3,8 @@ from django.forms import ModelForm, widgets
 from django import forms
 from .models import Project, Review
 
+
+
 class ProjectForm(ModelForm):
     class Meta:
         model = Project
@@ -24,6 +26,8 @@ class ProjectForm(ModelForm):
         # self.fields['description'].widget.attrs.update(
         #     {'class':'input'})
         
+        
+        
 class ReviewForm(ModelForm):
     class Meta:
         model = Review
@@ -31,7 +35,7 @@ class ReviewForm(ModelForm):
 
         labels = {
             'value': 'Place your vote',
-            'body': 'Add a comment with your vote'
+            'body': 'Add a comment with your vote.'
         }
 
     def __init__(self, *args, **kwargs):

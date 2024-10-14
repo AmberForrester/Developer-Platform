@@ -812,6 +812,13 @@ img {
   margin-bottom: 3rem;
 }
 
+.no-messages {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333; /* Adjust color as needed */
+}
+
 .backButton {
   background: var(--color-main-light);
   color: var(--color-main);

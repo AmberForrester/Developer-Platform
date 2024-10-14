@@ -1,5 +1,5 @@
-from django.db.models import Q
 from .models import Project, Tag
+from django.db.models import Q
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 def paginateProjects(request, projects, results):

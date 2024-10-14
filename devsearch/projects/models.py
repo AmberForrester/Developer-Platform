@@ -4,11 +4,12 @@ from django.db.models.deletion import CASCADE
 from users.models import Profile
 
 class Project(models.Model):
-    owner = models.ForeignKey(Profile, null=True, blank=True, 
-                              on_delete=models.CASCADE)
+    owner = models.ForeignKey(
+        Profile, null=True, blank=True, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
-    featured_image = models.ImageField(null=True, blank=True, default='default.jpg')
+    featured_image = models.ImageField(
+        null=True, blank=True, default='default.jpg')
     demo_link = models.CharField(max_length=2000, null=True, blank=True)
     source_link = models.CharField(max_length=2000, null=True, blank=True)
     tags = models.ManyToManyField('Tag', blank=True)
@@ -28,7 +29,7 @@ class Project(models.Model):
         try:
             url = self.featured_image.url
         except:
-            url = 'http://127.0.0.1:8000/images/default.jpg'
+            url = ''
         return url
         
     @property  

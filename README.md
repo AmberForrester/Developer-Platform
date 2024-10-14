@@ -34,6 +34,7 @@ Built as a full stack Django application with email functionality, messaging, co
 * [Postman](https://www.postman.com/downloads/)
 * [JSON Web Tokens](https://jwt.io/)
 * [Simple JWT](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
+* [Font Awesome](https://fontawesome.com/)
 * [HTML Character Codes](https://www.toptal.com/designers/htmlarrows/)
 * [PostgreSQL](https://www.postgresql.org/) - Database download
 * [pgAdmin](https://www.pgadmin.org/) - PostgreSQL GUI
