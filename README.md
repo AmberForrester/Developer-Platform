@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<img src="" alt=" ">
+<img src="/devsearch/static/images/DevSearch.png" alt=" ">
 
 <p align="center">Online platform where Developers from around the world can create a profile, and share their work with others.<br>
 Built as a full stack Django application with email functionality, messaging, commenting, API development and more!
