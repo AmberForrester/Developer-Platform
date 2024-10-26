@@ -12,24 +12,9 @@
   border: 2px solid var(--color-light);
 }
 
-.card.project {
-  height: 450px; /* Adjust based on your preferred height */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 /* Image Settings */
 img {
   width: 100%;
-}
-
-.project__thumbnail {
-  width: 100%;
-  height: 200px; /* Adjust to control image size */
-  object-fit: cover;
-  object-position: center;
-  border-radius: 0.5rem;
 }
 
 /* Tag Styles */
@@ -43,6 +28,27 @@ img {
   max-width: 85rem;
   margin: 0 auto;
 }
+
+.card.project {
+  height: 450px; /* Adjust based on your preferred height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.project__thumbnail {
+  width: 100%;
+  height: 200px; /* Adjust to control image size */
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 0.5rem;
+}
+
+
+
+
 
 /*=======================
   Header Section
