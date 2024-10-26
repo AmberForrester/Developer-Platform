@@ -7,8 +7,7 @@
             <a class="backButton" href="{% url 'user-profile' recipient.id %}"><i class="fa-solid fa-angle-left"></i></a>
             <br>
 
-            <form class="form" method="POST">
-                
+            <form class="form" method="POST"> 
                 {% csrf_token %}
 
                 {% if request.user.is_authenticated == False %}
