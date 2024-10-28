@@ -23,7 +23,7 @@ Built as a full stack Django application with email functionality, messaging, co
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#features">Features</a></li>
+    <li><a href="#project-structure">Project Structure</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#steps-to-install">Steps to Install</a></li>
     <li><a href="#how-to-run-the-application">How to Run the Application</a></li>
@@ -92,17 +92,21 @@ Create a `config.env` file in the root directory of the project (where `manage.p
   ```bash
   #Django secret key
   SECRET_KEY=your_secret_key_goes_here
+
   #Email settings
   EMAIL_HOST_USER=your_email
   EMAIL_HOT_PASSWORD=your_generated_app_specific_pass
+
   #Simple JWT
   JWT_SECRET_KEY=your_key
+
   #Database Setup
   DB_NAME=your_db_name
   DB_USER=you_db_user
   DB_PASSWORD=your_db_pass
   DB_HOST=your_host_location
   DB_PORT=your_chosen_port
+
   #Cloud Server Setup
   DATABASES = {
         'default': {
@@ -114,6 +118,7 @@ Create a `config.env` file in the root directory of the project (where `manage.p
             'PORT': 'your_chosen_port',
             }
         }
+
   #AWS S3 Credentials
   AWS_ACCESS_KEY_ID="your_given_key_id"
   AWS_SECRET_ACCESS_KEY="your_secret_access_key"
