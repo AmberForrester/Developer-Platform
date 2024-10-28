@@ -4,10 +4,10 @@
 
 <div align="center">
 
-<img src="/devsearch/static/images/DevSearch.png" alt=" ">
+<img src="/devsearch/static/images/DevSearch.png" alt="Picture of a developer search application that developers to connect from around the world, sharing their projects while engaging with others.">
 
 <p align="center">Online platform where Developers from around the world can create a profile, engage with other developers while sharing their projects.<br>
-Built as a full stack Django application with email functionality, messaging, commenting, API development, the ability to rate projects, and more!
+Built as a full stack Django application with email functionality, messaging, commenting, API development with Django REST Framework, the ability to rate projects, and more!
 <br />
 <br />
 
@@ -35,14 +35,6 @@ Built as a full stack Django application with email functionality, messaging, co
 </details>
 <br />
 
-
-
-## Features
-- **Real-time WPM Calculation:** Measures typing speed as you type.
-- **Error Tracking:** Highlights mistakes in red and displays the number of errors.
-- **Responsive Feedback:** Shows live updates of your WPM and error count.
-<br />
-<br />
 A good understanding of Python and Django would be beneficial to helping you create this project. However, it is always good practice to refer to the Documentation available when developing ***any*** project. 
 
 _Please refer to the [Python Documentation](https://docs.python.org/3/) and [Django Documentation](https://docs.djangoproject.com/en/5.1/) for your reference._
@@ -53,12 +45,17 @@ _The standard shell of Python, or REPL (Read-Eval-Print Loop) allows you to run 
 
 
 
+## Project Structure
+
+<img src="/devsearch/static/images/ProjectStructure.png" alt="Picture of the project structure in Visual Studio Code">
+
+
+
 ## Installation
 
 ### Prerequisites
 - **Python** >= 3: Make sure Python is installed on your machine. You can download it from [Python's official website](https://www.python.org/downloads/).
-- **Windows Users:** If you are running this project on Windows, you'll need to install the `windows-curses` package to use the `curses` library.
-
+- **Django** >= 4: Download the latest version of Django by visiting their website [Django Download](https://www.djangoproject.com/download/).
 
 
 
@@ -69,12 +66,20 @@ _The standard shell of Python, or REPL (Read-Eval-Print Loop) allows you to run 
   git clone https://github.com/AmberForrester/Developer-Platform
   ```
 
-2. **Navigate to the project directory:**
+2. **Set up a Virtual Environment:**
+
+Create and activate a virtual environment to isolate your dependencies.
   ```bash
-  cd WPM-Typing-Test
+  python -m venv env
+  .\env\Scripts\Activate
   ```
 
-3. **Install Required Dependencies:** 
+3. **Navigate to the project directory:**
+  ```bash
+  cd .\devsearch\
+  ```
+
+4. **Install Required Dependencies:** 
 
 - For **Windows users:** Run the following command to install the `windows-curses` package:
   ```bash
@@ -82,7 +87,7 @@ _The standard shell of Python, or REPL (Read-Eval-Print Loop) allows you to run 
   ```
 - For **Linux/macOS users:** No additional dependencies are needed, as `curses` is already part of the Python standard library.
 
-4. **Add your own sample text:**
+5. **Add your own sample text:**
 - You can add or modify the `text.txt` file to include your own sample text that users will type during the test. 
 - Each line in the `text.txt` file should contain a different sentence or paragraph for the test.
 
