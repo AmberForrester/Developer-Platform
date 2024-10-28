@@ -2,22 +2,18 @@
   --color-sub: #2d2d39;
 }
 
-/* Button */
 .btn--sub {
   background-color: var(--color-sub-light);
 }
 
-/* Card Styles */
 .card {
   border: 2px solid var(--color-light);
 }
 
-/* Image Settings */
 img {
   width: 100%;
 }
 
-/* Tag Styles */
 .tag > i.im {
   font-size: 1.5rem;
   margin-right: 0.5rem;
@@ -28,27 +24,6 @@ img {
   max-width: 85rem;
   margin: 0 auto;
 }
-
-.card.project {
-  height: 450px; /* Adjust based on your preferred height */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-
-.project__thumbnail {
-  width: 100%;
-  height: 200px; /* Adjust to control image size */
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 0.5rem;
-}
-
-
-
-
 
 /*=======================
   Header Section
@@ -95,7 +70,11 @@ img {
   pointer-events: all;
 }
 
-/* Toggle Menu for Smaller Screens */
+.project--thumbnail {
+  height: 250px;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 800px) {
   .header__logo {
     position: relative;
@@ -528,11 +507,12 @@ img {
   margin-top: 8rem;
 }
 
-/* Responsive Grid for Projects */
-.grid--three {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+/*========== Projects ==========*/
+
+.project__thumbnail {
+  height: 25rem;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .project__title {
@@ -816,21 +796,18 @@ img {
   font-size: 2.8rem;
   color: var(--color-sub);
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
-/* Container */
-.container {
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-  padding: 1rem;
+.messagePage .message__author {
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
-/* Single Project Preview */
-.singleProject__preview {
-  width: 100%;
-  max-height: 50vh;
-  object-fit: cover;
+.messagePage .message__date {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: left;
   margin-bottom: 3rem;
 }
 
