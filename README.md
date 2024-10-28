@@ -182,6 +182,20 @@ Start the development server to see the application in action:
 
 
 
+# Home Page 
+<img src="/devsearch/static/images/DevSearch.png" alt="Picture of dev search home page.">
+
+# Projects Page
+<img src="/devsearch/static/images/DevSearch.png" alt="Picture of dev search projects page.">
+
+# Profile Page
+<img src="/devsearch/static/images/DevSearch.png" alt="Picture of the developer's profile page, available after logging in.">
+
+# User Inbox
+<img src="/devsearch/static/images/DevSearch.png" alt="Picture of the developer's inbox page, available after logging in.">
+
+
+
 ### Contributing
 
 I have learned that contributions are the heart of what makes the open source community such an amazing place! We are constantly able to learn, grow, inspire eachother, and create incredible things. Any contributions you make are **greatly appreciated**, we are so lucky to be here together.
