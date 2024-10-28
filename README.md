@@ -186,10 +186,10 @@ Start the development server to see the application in action:
 <img src="/devsearch/static/images/DevSearch.png" alt="Picture of dev search home page.">
 
 # Projects Page
-<img src="" alt="Picture of dev search projects page.">
+<img src="/devsearch/static/images/Projects.png" alt="Picture of dev search projects page.">
 
 # Profile Page
-<img src="" alt="Picture of the developer's profile page, available after logging in.">
+<img src="/devsearch/static/images/Profile.png" alt="Picture of the developer's profile page, available after logging in.">
 
 # User Inbox
 <img src="/devsearch/static/images/Inbox.png" alt="Picture of the developer's inbox page, available after logging in.">
