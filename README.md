@@ -81,15 +81,85 @@ Create and activate a virtual environment to isolate your dependencies.
 
 4. **Install Required Dependencies:** 
 
-- For **Windows users:** Run the following command to install the `windows-curses` package:
+Run the following comman to install the dependencies specified in `requirements.txt`:
   ```bash
-  pip install windows-curses
+  pip install -r requirements.txt
   ```
-- For **Linux/macOS users:** No additional dependencies are needed, as `curses` is already part of the Python standard library.
 
-5. **Add your own sample text:**
-- You can add or modify the `text.txt` file to include your own sample text that users will type during the test. 
-- Each line in the `text.txt` file should contain a different sentence or paragraph for the test.
+5. **Set Up Environment Variables:**
+
+Create a `config.env` file in the root directory of the project (where `manage.py` is located), and add the necessary enviornment varibles: 
+  ```bash
+  #Django secret key
+  SECRET_KEY=your_secret_key_goes_here
+  #Email settings
+  EMAIL_HOST_USER=your_email
+  EMAIL_HOT_PASSWORD=your_generated_app_specific_pass
+  #Simple JWT
+  JWT_SECRET_KEY=your_key
+  #Database Setup
+  DB_NAME=your_db_name
+  DB_USER=you_db_user
+  DB_PASSWORD=your_db_pass
+  DB_HOST=your_host_location
+  DB_PORT=your_chosen_port
+  #Cloud Server Setup
+  DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'your_db_name',
+            'USER': 'your_username',
+            'PASSWORD': 'your_pass',
+            'HOST': 'your_db_host',
+            'PORT': 'your_chosen_port',
+            }
+        }
+  #AWS S3 Credentials
+  AWS_ACCESS_KEY_ID="your_given_key_id"
+  AWS_SECRET_ACCESS_KEY="your_secret_access_key"
+  AWS_STORAGE_BUCKET_NAME="name_of_your_storage_bucket"
+  ```
+
+6. **Add `config.env` to `.gitignore`**
+
+> [!CAUTION]
+> To ensure your sensitive information does not get committed to version control:
+  - Open (or create) the `.gitignore` file in the root directory.
+  - Add the following line to the file:
+  ```bash
+  config.env
+  ```
+
+This step will prevent the `config.env` file from being tracked by Git and keep your sensitive credentials secure.
+
+7. **Apply Migrations:**
+
+Run the following commands to set up your database:
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+
+8. **Create a Superuser:**
+
+This allows your to access the Django admin panel:
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+9. **Collect Static Files:** 
+
+Gather all static files in one place for Django to use:
+   ```bash
+   python manage.py collectstatic
+   ```
+
+10. **Run the Server:**
+
+Start the development server to see the application in action:
+   ```bash
+   python manage.py runserver
+   ```
 
 <p align="right">(<a href="#readme-top">top of page</a>)</p>
 
@@ -97,35 +167,11 @@ Create and activate a virtual environment to isolate your dependencies.
 
 ### How to Run the Application
 
-Once you've cloned the project and installed Python, follow these steps to run the typing test:
+- **Starting the Server:** Once you have completed the installation steps, you can start the Django development server as shown above. 
 
-1. Open your terminal in the project directory and run the following command: 
-   ```bash
-   python speedTest.py
-   ```
+- **Accessing the Application:** Open your web browser and go to `http://127.0.0.1.8000/` to view the DevSearch platform.
 
-2. You will be greeted with a welcome screen. Press any key to begin the test.
-
-3. Type the displayed text as quickly and accurately as you can.
-
-4. Press any key to start a new test or `Esc` to exit the program.
-
-
-
-## How the Test Works
-
-- **Words Per Minute (WPM):** Your typing speed is calculated based on the total number of characters typed (including mistakes). The WPM is updated in real-time as you type. </br>
-
-- **Errors:** Incorrect characters are highlighted in red, and the error count is displayed. </br>
-
-- **Completion:** When you finish typing the entire sentence or paragraph correctly, the test ends and your final WPM and error count are displayed. </br>
-
-# Example Output
-```vbnet
-    Hello world my name is Amber and I am a full stack developer.
-    WPM: 68 | Errors: 3
-    You completed the text! Press any key to play again or Esc to quit.
-```
+- **Django Admin Panel:** You can access the admin panel at `http://127.0.0.1.8000/admin/` using the superuser account you created. 
 
 <p align="right">(<a href="#readme-top">top of page</a>)</p>
 
