@@ -21,7 +21,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True # During deployment set this to false.
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://devsearch.amberforrester.io', '.vercel.app', 'now.sh'] # What domain can connect to website. like ,'mywebsite.com'.
+ALLOWED_HOSTS = ['.vercel.app', 'now.sh','localhost', '127.0.0.1', 'https://devsearch.amberforrester.io', ] # What domain can connect to website. like ,'mywebsite.com'.
 
 
 # Application definition
