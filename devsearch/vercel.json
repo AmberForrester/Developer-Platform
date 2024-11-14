@@ -1,7 +1,7 @@
 {
     "builds": [
       {
-        "src": "developer-platform/wsgi.py",
+        "src": "devsearch/wsgi.py",
         "use": "@vercel/python",
         "config": {
           "maxLambdaSize": "15mb",
@@ -23,7 +23,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "developer-platform/wsgi.py"
+        "dest": "devsearch/wsgi.py"
       }
     ]
   }
