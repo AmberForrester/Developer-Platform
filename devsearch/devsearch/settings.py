@@ -21,12 +21,13 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True # During deployment set this to false.
 
-ALLOWED_HOSTS = ['.vercel.app', 'now.sh','localhost', '127.0.0.1', 'https://devsearch.amberforrester.io', ] # What domain can connect to website. like ,'mywebsite.com'.
+ALLOWED_HOSTS = ['*'] # What domain can connect to website. like ,'mywebsite.com'.
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -215,8 +216,10 @@ EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'devsearch/static')],
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 MEDIA_URL = '/images/'
